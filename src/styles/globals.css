@@ -1,0 +1,154 @@
+/* globals.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.animated-background {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #6b21a8, #771c60, #2563eb);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.centered-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.button-primary {
+  background-color: white;
+  color: black;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-primary:hover {
+  background-color: #e5e7eb; /* light gray */
+}
+
+header {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+nav a {
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.transcribe-container {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.transcribe-container h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.transcribe-container input[type="text"] {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.transcribe-container button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.transcribe-container button:hover:not(:disabled) {
+  background-color: #1e40af;
+}
+
+.transcribe-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.transcript-box {
+  margin-top: 24px;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: monospace, monospace;
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
