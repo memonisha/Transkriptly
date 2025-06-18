@@ -13,7 +13,7 @@ export default function HomePage() {
           alt="Logo" 
           style={{ width: "150px", marginBottom: "16px" }}
         />
-        <Image src="/logo.png" alt="example" width={300} height={200} />
+       
        
         <p style={{ textAlign: "center", fontSize: "15px" }}>Just Paste a YouTube link to get instant transcriptions!!!</p>
         
